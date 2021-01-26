@@ -1,2 +1,8 @@
 <!--pages/fiind/find.wxml-->
-<text>pages/fiind/find.wxml</text>
+<text>发现</text>
+<view>
+  <block>
+    <my-card></my-card>
+  </block>
+</view>
+
