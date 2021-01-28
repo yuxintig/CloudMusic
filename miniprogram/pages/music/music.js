@@ -47,7 +47,6 @@ Page({
    */
   onLoad: function (options) {
     this._getPlaylist()
-
   },
 
   /**
@@ -105,23 +104,19 @@ Page({
       title: '加载中',
     })
     wx.cloud.callFunction({
-      name:'music',
+      name: 'music',
       data:{
         start: this.data.playlist.length,
-        count: MAX_LIMIT,
+        count:MAX_LIMIT,
         $url:'playlist',
       }
-    }).then((res) =>{
+    }).then((res) => {
       console.log(res)
       this.setData({
-        playlist:this.data.playlist.concat(res.result.data)
+        playlist: this.data.playlist.concat(res.result.data)
       })
       wx.stopPullDownRefresh()
       wx.hideLoading()
-      })
-   
-
-  },
-
-  
+    })
+  }
 })
