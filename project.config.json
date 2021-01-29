@@ -69,6 +69,12 @@
           "pathName": "pages/musiclist/musiclist",
           "query": "playlistId=104565663",
           "scene": null
+        },
+        {
+          "name": "player",
+          "pathName": "pages/player/player",
+          "query": "musicId=247187&index=0",
+          "scene": null
         }
       ]
     }
