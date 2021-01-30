@@ -6,7 +6,7 @@ cloud.init({
 })
  const TcbRouter =require('tcb-router')
  const axios = require('axios')
- const BASE_URL = 'https://shinonon.cn1.utools.club'
+ const BASE_URL = 'http://47.98.169.198:3000/'
 // 云函数入口函数
 // 云函数入口函数
 exports.main = async (event, context) => {
