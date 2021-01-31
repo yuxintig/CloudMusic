@@ -14,3 +14,14 @@
     <text class="iconfont icon-houtui1" bind:tap="onNext"></text>
   </view>
 </view>
+<!-- 啊 -->
+<div class="container">
+    <div class="wave {{isPlaying ? 'play' : ''}} ripple danger" hidden="{{!isPlaying}}">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="content">
+            <i class="fa fa-bell"></i>
+        </div>
+    </div>
+</div>

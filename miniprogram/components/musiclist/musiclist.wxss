@@ -1,5 +1,6 @@
 /* components/musiclist/musiclist.wxss */
 .musiclist-container{
+  background-color:rgb(211, 216, 238);
   display: flex;
   padding: 14rpx 20rpx;
   align-items: center;

@@ -1,3 +1,7 @@
+page{
+  background-color:rgb(197, 204, 235);
+}
+
 .swiper{
 height: 200px;
 }
