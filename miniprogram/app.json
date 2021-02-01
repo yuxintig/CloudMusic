@@ -5,7 +5,8 @@
     "pages/profile/profile",
     "pages/musiclist/musiclist",
     "pages/player/player",
-    "pages/test/test"
+    "pages/test/test",
+    "components/progress-bar/progress-bar"
   ],
   "requiredBackgroundModes": [
     "audio"
@@ -19,7 +20,6 @@
   },
   "tabBar": {
     "color": "#818fcb",
-
     "selectedColor": "#818fcb",
     "list": [
       {
@@ -27,7 +27,6 @@
         "text": "音乐",
         "iconPath": "images/tab/music.png",
         "selectedIconPath": "images/tab/music-actived.png"
-        
       },
       {
         "pagePath": "pages/find/find",

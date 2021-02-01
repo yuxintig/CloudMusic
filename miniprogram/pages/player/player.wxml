@@ -8,14 +8,7 @@
     src="{{picUrl}}"></image>
   </view>
 
-  <view class="control">
-    <text class="iconfont icon-houtui"bind:tap="onPrev"></text>
-    <text class="iconfont {{isPlaying?'icon-zanting' : 'icon-bofang'}}" bind:tap="togglePlaying"></text>
-    <text class="iconfont icon-houtui1" bind:tap="onNext"></text>
-  </view>
-</view>
-<!-- 啊 -->
-<div class="container">
+  <div class="container">
     <div class="wave {{isPlaying ? 'play' : ''}} ripple danger" hidden="{{!isPlaying}}">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -25,3 +18,14 @@
         </div>
     </div>
 </div>
+
+  <view class="progress-bar">
+    <xu-progress-bar/>
+  </view>
+
+  <view class="control">
+    <text class="iconfont icon-houtui"bind:tap="onPrev"></text>
+    <text class="iconfont {{isPlaying?'icon-zanting' : 'icon-bofang'}}" bind:tap="togglePlaying"></text>
+    <text class="iconfont icon-houtui1" bind:tap="onNext"></text>
+  </view>
+</view>
