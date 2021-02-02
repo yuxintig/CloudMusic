@@ -6,7 +6,7 @@ cloud.init({
 })
  const TcbRouter =require('tcb-router')
  const axios = require('axios')
- const BASE_URL = 'http://47.98.169.198:3000/'
+ const BASE_URL = 'http://47.98.169.198:3000'
 // 云函数入口函数
 // 云函数入口函数
 exports.main = async (event, context) => {
@@ -36,5 +36,14 @@ exports.main = async (event, context) => {
     const res = await axios.get(`${BASE_URL}/song/url?id=${event.musicId}`)
     ctx.body = res.data
   })
+
+  app.router('lyric',async(ctx,next) => {
+    console.log('!!!')
+    console.log(`${BASE_URL}/lyric?id=${event.musicId}`)
+    const res = await axios.get(`${BASE_URL}/lyric?id=${event.musicId}`)
+    console.log('######' + res)
+    ctx.body = res.data
+  })
+
   return app.serve()
 }
