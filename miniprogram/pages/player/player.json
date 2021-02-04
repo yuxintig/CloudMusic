@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "xu-progress-bar" :"/components/progress-bar/progress-bar",
-    "xu-lyric" :"/components/lyric/lyric"
+    "x-progress-bar": "/components/progress-bar/progress-bar",
+    "x-lyric":"/components/lyric/lyric",
+    "toolbar":"/components/navigation-bar/navigation-bar"
   }
 }

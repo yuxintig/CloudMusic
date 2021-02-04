@@ -1,34 +1,29 @@
+<toolbar style="opacity:1;">
+  <image src="../../images/back.png" slot="left" style="width:50rpx;height:50rpx;opacity:10;" bindtap="_back"></image>
+  <view class="toolbar-title" slot="content">{{currentMusicName}}</view>
+</toolbar>
+
 <view wx:if="{{picUrl}}" class="player-container" style="background:url({{picUrl}}) center/cover no-repeat">
 </view>
 <view class="player-mask"></view>
-
 <view class="player-info">
   <!-- 封面信息 -->
-  <view class="player-disc {{isPlaying?'playing':''}}" hidden="{{isLyricShow}}" bind:tap="onLyricShow">
-    <image class="player-img zhuan {{isPlaying?'zhuan':'ting'}}" 
-    src="{{picUrl}}"></image>
+  <view class="player-disc {{isPlaying?'playing':''}}" hidden="{{isLyricShow}}" bindtap="onLyricShow">
+    <image class="player-img zhuan {{isPlaying?'':'ting'}}" src="{{picUrl}}"></image>
   </view>
-<!-- 波纹效果 -->
-<!-- 歌词 -->
-<xu-lyric class="lyric" isLyricShow="{{isLyricShow}}" lyric="{{lyric}}" bind:tap="onLyricShow"></xu-lyric>
 
-<view hidden="{{isLyricShow}}">
-  <div class="container" hidden="true">
-    <div class="wave {{isPlaying ? 'play' : ''}} ripple danger" hidden="{{!isPlaying}}">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-  </div>
-</view>
-<!-- 进度条 -->
+  <x-lyric class="lyric" isLyricShow="{{isLyricShow}}" lyric="{{lyric}}" bind:tap="onLyricShow"></x-lyric>
+
+
+
   <view class="progress-bar">
-    <xu-progress-bar/>
+    <x-progress-bar bind:musicEnd="onNext" bind:timeUpdate="timeUpdate" />
   </view>
-<!-- 控制面板 -->
+  <!-- 控制面板 -->
   <view class="control">
-    <text class="iconfont icon-houtui"bind:tap="onPrev"></text>
-    <text class="iconfont {{isPlaying?'icon-zanting' : 'icon-bofang'}}" bind:tap="togglePlaying"></text>
-    <text class="iconfont icon-houtui1" bind:tap="onNext"></text>
+    <text class="iconfont icon-hanhan-01-01" bindtap="onPrev"></text>
+    <text class="iconfont {{isPlaying?'icon-zanting':'icon-bofang'}}" bind:tap="togglePlaying" />
+    <text class="iconfont icon-hanhan-01-011" bindtap="onNext"></text>
   </view>
+
 </view>

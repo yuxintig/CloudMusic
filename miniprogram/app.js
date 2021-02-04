@@ -16,10 +16,24 @@ App({
     }
 
     this.globalData = {}
-  },
 
-  onShow(options){
-    console.log('onShow执行')
-    console.log(options)
-  }
+
+  wx.getSystemInfo({
+    success: function success(res) {
+      var ios = !!(res.system.toLowerCase().search('ios') + 1);
+      var statusBarHeight = res.statusBarHeight;
+      var topBarHeight = ios ? (44 + statusBarHeight) : (48 + statusBarHeight);
+      var innerWidth = wx.getMenuButtonBoundingClientRect().left
+      var innerPaddingRight = res.windowWidth - innerWidth
+      wx.setStorageSync("systemInfo",{
+        ios: ios,
+        topBarHeight: topBarHeight,
+        statusBarHeight: statusBarHeight,
+        innerWidth: 'width:' + innerWidth + 'px',
+        innerPaddingRight: 'padding-right:' + innerPaddingRight + 'px',
+        contentWidth: innerWidth / 1 + 'px'
+      })
+    }
+  })
+}
 })

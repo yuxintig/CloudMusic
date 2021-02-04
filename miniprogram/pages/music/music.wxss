@@ -24,3 +24,9 @@ height: 200px;
   flex-wrap: wrap;
   margin-top: 10rpx;
 }
+
+.toolbar-title {
+  color: #FFFFFF;
+  margin-left: 32rpx;
+  margin-top: -10rpx;
+}
