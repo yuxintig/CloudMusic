@@ -11,7 +11,7 @@ Component({
   properties: {
     bgColor: {
       type:String,
-      value:'#9c90c2'
+      value:'#9a8cbd'
     }
   },
 

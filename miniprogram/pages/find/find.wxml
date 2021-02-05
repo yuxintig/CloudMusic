@@ -1,8 +1,13 @@
-<!--pages/fiind/find.wxml-->
-<text>发现</text>
-<view>
-  <block>
-    <my-card></my-card>
-  </block>
-</view>
-
+<toolbar>
+  <view class="toolbar-title" slot="content">
+    发现
+  </view>
+</toolbar>
+  <view class="header">
+    <view class="left" bind:tap="onPublish">
+      <text class="iconfont icon-zuixing-12"></text>
+    </view>
+    <view class="right">
+      <x-search bind:search="onSearch"/>
+    </view>
+  </view>

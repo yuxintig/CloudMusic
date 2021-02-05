@@ -1,1 +1,17 @@
-/* pages/fiind/find.wxss */
+.toolbar-title {
+  color: #FFFFFF;
+  margin-left: 32rpx;
+  margin-top: -10rpx;
+}
+
+.header{
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon-zuixing-12{
+  margin: 10px;
+  font-size: 30px;
+}
